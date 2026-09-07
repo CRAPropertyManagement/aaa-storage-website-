@@ -88,6 +88,11 @@
         <div class="size">5×10</div>
         <div class="use">Walk-in closet</div>
         <div class="price">$75<span>/mo</span></div>
+        <div class="door-hover">
+          <div class="size">5×10 · 50 sq ft</div>
+          <p>Comparable to a walk-in closet — great for a few boxes, seasonal gear, or a small apartment's overflow.</p>
+          <div class="price">$75<span>/mo</span></div>
+        </div>
       </div>
       <div class="door-card popular">
         <div class="icon-wrap"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
@@ -95,24 +100,44 @@
         <div class="size">10×10</div>
         <div class="use">1-bed apartment</div>
         <div class="price">$100<span>/mo</span></div>
+        <div class="door-hover">
+          <div class="size">10×10 · 100 sq ft</div>
+          <p>About half a garage — fits a studio or one-bedroom's furniture, boxes, and everyday overflow.</p>
+          <div class="price">$100<span>/mo</span></div>
+        </div>
       </div>
       <div class="door-card">
         <div class="icon-wrap"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
         <div class="size">10×20</div>
         <div class="use">2-bed home</div>
         <div class="price">$150<span>/mo</span></div>
+        <div class="door-hover">
+          <div class="size">10×20 · 200 sq ft</div>
+          <p>The size of a one-car garage — holds a two-bedroom home's furniture and appliances comfortably.</p>
+          <div class="price">$150<span>/mo</span></div>
+        </div>
       </div>
       <div class="door-card">
         <div class="icon-wrap"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
         <div class="size">10×25</div>
         <div class="use">3–4 bed home</div>
         <div class="price">$175<span>/mo</span></div>
+        <div class="door-hover">
+          <div class="size">10×25 · 250 sq ft</div>
+          <p>Garage-and-a-half — built for a three- or four-bedroom home's furniture, appliances, and boxes.</p>
+          <div class="price">$175<span>/mo</span></div>
+        </div>
       </div>
       <div class="door-card">
         <div class="icon-wrap"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
         <div class="size">10×30</div>
         <div class="use">1.5-car garage</div>
         <div class="price">$200<span>/mo</span></div>
+        <div class="door-hover">
+          <div class="size">10×30 · 300 sq ft</div>
+          <p>Extra-large, 1.5-car-garage sized — ideal for a four- or five-bedroom home or a full renovation.</p>
+          <div class="price">$200<span>/mo</span></div>
+        </div>
       </div>
     </div>
     <p class="price-link"><a href="storage-units-pricing.html">View the facility map &amp; unit photos →</a></p>
@@ -166,7 +191,6 @@
 
 <footer>
   <h3>AAA Self Storage – Lehi, UT</h3>
-  <a class="footer-reserve" href="storage-units-pricing.html">Reserve</a>
   <div class="addr">
     874 West 1500 North, Lehi, UT 84043<br>
     <a href="tel:+18013500105">(801) 350-0105</a> | <a href="mailto:infoAAA@managementcra.com">infoAAA@managementcra.com</a>
@@ -186,6 +210,17 @@
   </div>
   <div class="copyright">© 2026 AAA Self Storage. All Rights Reserved.</div>
 </footer>
+
+<script>
+  document.querySelectorAll('.door-card').forEach(function(card){
+    card.addEventListener('click', function(e){
+      if (window.matchMedia('(hover: hover)').matches) return;
+      var wasOpen = card.classList.contains('revealed');
+      document.querySelectorAll('.door-card.revealed').forEach(function(c){ c.classList.remove('revealed'); });
+      if (!wasOpen) card.classList.add('revealed');
+    });
+  });
+</script>
 
 </body>
 </html>
