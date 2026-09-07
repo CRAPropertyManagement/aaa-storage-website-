@@ -142,8 +142,9 @@ nav.main-nav a.active,nav.main-nav a:hover{border-bottom-color:var(--blue);color
   transition:opacity .2s ease, transform .2s ease;pointer-events:none;text-align:center;
 }
 .door-card:hover .door-hover, .door-card.revealed .door-hover{opacity:1;transform:translateY(0);}
-.door-hover .size{color:#fff;font-size:16px;margin-bottom:8px;}
-.door-hover p{font-size:13px;line-height:1.6;margin:0;color:#DCE9F7;}
+.door-hover .size{color:#fff;font-size:15px;margin-bottom:10px;}
+.door-hover .sub{font-weight:700;font-size:14.5px;margin-bottom:6px;color:#fff;}
+.door-hover p{font-size:12.5px;line-height:1.55;margin:0;color:#DCE9F7;}
 .door-hover .price{color:#fff;margin-top:12px;}
 .door-hover .price span{color:#B9D3EC;}
 
@@ -299,7 +300,7 @@ footer nav a:hover{color:var(--blue);}
 .map-intro .eyebrow{display:block;color:var(--blue);font-size:13px;font-weight:600;margin-bottom:8px;}
 .map-intro h2{color:var(--ink);font-size:28px;}
 .map-intro p{color:var(--gray);font-size:15px;margin-top:8px;}
-.aaa-map-container{max-width:820px;margin:0 auto;padding:0 12px;overflow:visible;}
+.aaa-map-container{max-width:1140px;margin:0 auto;padding:0 24px;overflow:visible;}
 .aaa-map{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--border);}
 .aaa-bg{fill:#fff;}
 .aaa-title{font-family:"Inter",sans-serif;font-weight:700;font-size:20px;fill:var(--ink);}
