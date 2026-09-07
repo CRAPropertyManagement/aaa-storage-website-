@@ -111,21 +111,24 @@ nav.main-nav a.active,nav.main-nav a:hover{border-bottom-color:var(--blue);color
 .door-card{
   background:#fff;border:1px solid var(--border);border-radius:16px;
   overflow:hidden;position:relative;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-  padding:26px 18px;text-align:center;
+  padding:26px 18px;text-align:center;isolation:isolate;
 }
 .door-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(16,24,40,.09);}
 .door-card.popular{border-color:var(--blue);box-shadow:0 8px 24px rgba(29,78,137,.12);}
 .door-card .icon-wrap{
   width:40px;height:40px;border-radius:10px;background:var(--blue-light);
-  display:flex;align-items:center;justify-content:center;margin:0 auto 14px;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 14px;position:relative;z-index:1;
 }
 .door-card.popular .icon-wrap{background:var(--blue);}
 .door-card svg{width:18px;height:18px;stroke:var(--blue);fill:none;stroke-width:1.8;}
 .door-card.popular svg{stroke:#fff;}
 .door-badge{
   font-size:11px;font-weight:600;background:var(--blue);color:#fff;
-  padding:3px 10px;border-radius:999px;display:inline-block;margin-bottom:10px;
+  padding:3px 10px;border-radius:999px;display:inline-block;margin-bottom:10px;position:relative;z-index:1;
 }
+.door-card .size, .door-card .use, .door-card .price{position:relative;z-index:1;}
+.door-card:hover .size, .door-card:hover .use, .door-card:hover .price,
+.door-card.revealed .size, .door-card.revealed .use, .door-card.revealed .price{visibility:hidden;}
 .door-card .size{font-weight:700;font-size:19px;color:var(--ink);}
 .door-card .use{color:var(--gray);font-size:12.5px;margin:6px 0;}
 .door-card .price{font-weight:700;font-size:22px;color:var(--blue);margin-top:8px;}
@@ -136,9 +139,10 @@ nav.main-nav a.active,nav.main-nav a:hover{border-bottom-color:var(--blue);color
 
 /* Hover-reveal description on size cards */
 .door-hover{
-  position:absolute;inset:0;background:var(--blue);color:#fff;
+  position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;
+  background:var(--blue);color:#fff;z-index:2;overflow:hidden;
   display:flex;flex-direction:column;justify-content:center;align-items:center;
-  padding:24px 18px;opacity:0;transform:translateY(10px);
+  padding:18px 16px;opacity:0;transform:translateY(10px);
   transition:opacity .2s ease, transform .2s ease;pointer-events:none;text-align:center;
 }
 .door-card:hover .door-hover, .door-card.revealed .door-hover{opacity:1;transform:translateY(0);}
@@ -363,6 +367,11 @@ footer nav a:hover{color:var(--blue);}
   .hero-photo{order:-1;}
   .hero h1{font-size:32px;}
   .door-grid{grid-template-columns:repeat(2,1fr);}
+  .door-hover{padding:14px 12px;}
+  .door-hover .size{font-size:13.5px;margin-bottom:6px;}
+  .door-hover .sub{font-size:13px;margin-bottom:4px;}
+  .door-hover p{font-size:11.5px;line-height:1.45;}
+  .door-hover .price{font-size:16px;margin-top:8px;}
   .steps-grid{grid-template-columns:1fr;}
   .testi-grid{grid-template-columns:1fr;}
   .step-cards{grid-template-columns:1fr;}
