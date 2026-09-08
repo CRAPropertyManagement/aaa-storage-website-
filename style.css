@@ -24,7 +24,7 @@ body{
 h1,h2,h3{font-family:"Inter",sans-serif;margin:0;font-weight:700;letter-spacing:-0.02em;}
 a{color:inherit;}
 img{max-width:100%;display:block;}
-.wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px;}
 .wrap-narrow{max-width:720px;margin:0 auto;padding:0 24px;}
 
 /* ===== Header ===== */
@@ -54,7 +54,7 @@ nav.main-nav a.active,nav.main-nav a:hover{border-bottom-color:var(--blue);color
 
 /* ===== Hero (two-column, flat light background) ===== */
 .hero{background:linear-gradient(180deg, var(--blue-light) 0%, #fff 100%);padding:72px 24px;}
-.hero-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;}
+.hero-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;}
 .hero .kicker{
   display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--blue);
   font-size:13px;font-weight:600;padding:7px 14px;border-radius:999px;margin-bottom:20px;
@@ -304,7 +304,7 @@ footer nav a:hover{color:var(--blue);}
 .map-intro .eyebrow{display:block;color:var(--blue);font-size:13px;font-weight:600;margin-bottom:8px;}
 .map-intro h2{color:var(--ink);font-size:28px;}
 .map-intro p{color:var(--gray);font-size:15px;margin-top:8px;}
-.aaa-map-container{max-width:1140px;margin:0 auto;padding:0 24px;overflow:visible;}
+.aaa-map-container{max-width:1320px;margin:0 auto;padding:0 24px;overflow:visible;}
 .aaa-map{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--border);}
 .aaa-bg{fill:#fff;}
 .aaa-title{font-family:"Inter",sans-serif;font-weight:700;font-size:20px;fill:var(--ink);}
